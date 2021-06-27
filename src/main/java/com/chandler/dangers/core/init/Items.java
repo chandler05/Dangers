@@ -12,5 +12,5 @@ public class Items {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Dangers.MOD_ID);
 
-    public static final RegistryObject<BlockItem> SOFT_SNOW = ITEMS.register("soft_snow", () -> new BlockItem(Blocks.SOFT_SNOW.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> SOFT_SNOW = ITEMS.register("soft_snow", () -> new BlockItem(Blocks.SOFT_SNOW_BLOCK.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 }

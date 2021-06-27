@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "footprints=false": { "model": "chandlers_dangers:block/soft_snow" },
+        "footprints=true": { "model": "chandlers_dangers:block/soft_snow_footprints" }
+    }
+}
