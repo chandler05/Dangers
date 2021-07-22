@@ -1,5 +1,6 @@
 package com.chandler.dangers.common.blocks;
 
+import com.chandler.dangers.common.entities.KeeperOfTheIceEntity;
 import net.minecraft.block.*;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.entity.Entity;
@@ -22,7 +23,7 @@ public class SoftSnowBlock extends Block {
 
     @Override
     public void stepOn(World p_176199_1_, BlockPos p_176199_2_, Entity p_176199_3_) {
-        if (!(p_176199_3_ instanceof ArmorStandEntity) && p_176199_1_.getBlockState(p_176199_2_.above()).isAir()) {
+        if (!(p_176199_3_ instanceof ArmorStandEntity) && !(p_176199_3_ instanceof KeeperOfTheIceEntity) && p_176199_1_.getBlockState(p_176199_2_.above()).isAir()) {
             p_176199_1_.setBlock(p_176199_2_, this.stateDefinition.any().setValue(FOOTPRINTS, Boolean.valueOf(true)), 2);
         }
         super.stepOn(p_176199_1_, p_176199_2_, p_176199_3_);

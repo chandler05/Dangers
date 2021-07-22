@@ -1,7 +1,6 @@
 package com.chandler.dangers.common.goals;
 
 import java.util.EnumSet;
-import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.util.math.BlockPos;
@@ -77,6 +76,7 @@ public abstract class MoveMobToBlockGoal extends Goal {
                 this.mob.getNavigation().moveTo((double)((float)blockpos.getX()) + 0.5D, (double)blockpos.getY(), (double)((float)blockpos.getZ()) + 0.5D, this.speedModifier);
             }
         } else {
+            System.out.println("Target Reached");
             this.reachedTarget = true;
             --this.tryTicks;
         }
